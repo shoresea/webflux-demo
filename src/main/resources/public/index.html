@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server-side Events</title>
+</head>
+<body>
+
+    <div></div>
+    <ul></ul>
+
+    <script type="text/javascript">
+        if(!!window.EventSource) {
+            var evtSource = new EventSource('products/events');
+            var eventList = document.querySelector('ul');
+            var latestEvent = document.querySelector('div');
+
+            evtSource.onmessage = function(e) {
+                var newElement = document.createElement("li");
+                newElement.textContent = "Event: " + e.data;
+                eventList.appendChild(newElement);
+                latestEvent.textContent = "Event: " + e.data;
+            }
+        } else {
+            alert("The browser doesn't support Server-Side Events");
+        }
+
+    </script>
+</body>
+</html>
