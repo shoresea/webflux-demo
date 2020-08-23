@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://github.com/shoresea/webflux-demo/actions"><img alt="shoresea/webflux-demo status" src="https://github.com/shoresea/webflux-demo/workflows/ci/badge.svg"></a>
+</p>
+
 # Spring WebFlux Demo
 This project is an example of a reactive micro-service developed using Spring WebFlux.
 It also has a Server-Side Event example. (Try at http://localhost:8080/index.html after running this demo on your local machine)
